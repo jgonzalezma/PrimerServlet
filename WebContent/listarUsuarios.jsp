@@ -15,21 +15,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div><h1>La lista de usuarios</h1></div>
+<div><h1>La lista de usuarios con java</h1></div>
 <%
 	for(Usuario usuario : usuarios){
 		out.println(usuario.getNombre() + "<br>");
 	}
 %>
-<a href="ListarUsuarios?nombre=Juan">Prueba get</a>
-<form action="ListarUsuarios" method="Post">
+<form action="ListarUsuarios">
 <input type="text" name="nombre"/>
 <input type="submit" value="enviar"/>
 </form>
 
-<div><h1>La lista de usuarios con jstl</h1></div>
-	<c:forEach ${usuarios} var="usuario">
+	<h1>La lista de usuarios con jstl</h1>
+	<c:forEach items="${usuarios}" var="usuario">
 		${usuario.nombre} <br>
+	</c:forEach>
+	<br>
+	<h1>Lista de usuarios de biblioteca</h1>
+	<c:forEach items="${usuarios}" var="usuario">
+		${usuario.apellido} <br>
 	</c:forEach>
 	
 </body>
