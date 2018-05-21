@@ -33,7 +33,7 @@
 	<br>
 	<h1>Lista de usuarios de biblioteca</h1>
 	<c:forEach items="${usuarios}" var="usuario">
-		${usuario.apellido} <br>
+		${usuarioLogeado.apellido} <br>
 	</c:forEach>
 	
 </body>

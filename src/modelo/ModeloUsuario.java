@@ -62,6 +62,20 @@ public class ModeloUsuario extends Conector {
 		return usuario;
 
 	}
+	public Usuario selectUser(String nombre) {
+		// Crear lista de usuarios
+		Usuario usuario = null;
+		try {
+			Statement st = conexion.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre =('" + nombre + "')");
+			rs.next();
+			usuario = new Usuario(rs.getInt("id"), rs.getString("nombre"), rs.getString("apellido"), rs.getInt("edad"),
+					rs.getString("dni"), rs.getDate("fechaNacimiento"), rs.getString("password"), rs.getString("rol"));
+		} catch (SQLException e) {
+			System.out.println("Error, prueba otra vez");
+		}
+		return usuario;
+	}
 
 	public void delete(int id) {
 		try {
