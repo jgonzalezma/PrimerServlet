@@ -25,6 +25,8 @@ public class Usuario {
 		return USUARIO;
 	}
 
+
+
 	public static String getAdministrador() {
 		return ADMINISTRADOR;
 	}
@@ -111,6 +113,12 @@ public class Usuario {
 
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
+	}
+	
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", dni=" + dni
+				+ ", fechaNacimineto=" + fechaNacimineto + ", password=" + password + ", rol=" + rol + "]";
 	}
 
 }
