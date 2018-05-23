@@ -11,11 +11,8 @@ public class Usuario {
 	private String dni;
 	private Date fechaNacimineto;
 	private String password;
-	private String rol;
-	private String imagen;
-	
+
 	public static final String USUARIO = "usuario";
-	public static final String ADMINISTRADOR = "admin";
 
 	public Usuario() {
 
@@ -25,14 +22,7 @@ public class Usuario {
 		return USUARIO;
 	}
 
-
-
-	public static String getAdministrador() {
-		return ADMINISTRADOR;
-	}
-
-	Usuario(int id, String nombre, String apellido, int edad, String dni, Date fechaNacimiento, String password,
-			String rol) {
+	Usuario(int id, String nombre, String apellido, int edad, String dni, Date fechaNacimiento, String password) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -40,7 +30,6 @@ public class Usuario {
 		this.dni = dni;
 		this.fechaNacimineto = fechaNacimiento;
 		this.password = password;
-		this.rol = rol;
 	}
 
 	public int getId() {
@@ -99,26 +88,10 @@ public class Usuario {
 		this.password = password;
 	}
 
-	public String getRol() {
-		return rol;
-	}
-
-	public void setRol(String rol) {
-		this.rol = rol;
-	}
-
-	public String getImagen() {
-		return imagen;
-	}
-
-	public void setImagen(String imagen) {
-		this.imagen = imagen;
-	}
-	
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", dni=" + dni
-				+ ", fechaNacimineto=" + fechaNacimineto + ", password=" + password + ", rol=" + rol + "]";
+				+ ", fechaNacimineto=" + fechaNacimineto + ", password=" + password + "]";
 	}
 
 }

@@ -12,28 +12,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista de usuarios Biblioteca</title>
 </head>
 <body>
-<div><h1>La lista de usuarios con java</h1></div>
-<%
-	for(Usuario usuario : usuarios){
-		out.println(usuario.getNombre() + "<br>");
-	}
-%>
-<form action="ListarUsuarios">
-<input type="text" name="nombre"/>
-<input type="submit" value="enviar"/>
+<h1>BIBLIOTECA</h1>
 </form>
-
-	<h1>La lista de usuarios con jstl</h1>
-	<c:forEach items="${usuarios}" var="usuario">
-		${usuario.nombre} <br>
-	</c:forEach>
-	<br>
 	<h1>Lista de usuarios de biblioteca</h1>
-	<c:forEach items="${usuarios}" var="usuario">
-		${usuarioLogeado.apellido} <br>
+	<c:forEach items="${usuarios}" var="user">
+		${user.nombre} <br>
 	</c:forEach>
 	
 </body>
