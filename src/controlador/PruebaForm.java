@@ -43,6 +43,7 @@ public class PruebaForm extends HttpServlet {
 			}
 		}
 		out.println(request.getParameter("buscador"));
+		out.println(request.getParameter("fecha"));
 	}
 
 	/**
